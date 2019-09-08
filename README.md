@@ -28,7 +28,7 @@ Things we like:
 - Author: Abhinav Ashesh
 - How to run the application?
   Follow the instructions below. 
-  1. Open the terminal window. Create a new folder
+  1. Open the terminal window.
   2. git clone https://github.com/abhinavtdgp/frontenddevelopertest.git
   3. cd to the folder created.
   4. npm install
