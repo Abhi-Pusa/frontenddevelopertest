@@ -26,7 +26,7 @@ Things we like:
 
 - Solution Implementation
 - Author: Abhinav Ashesh
-How to run the application?
+- How to run the application?
   Follow the instructions below. 
   1. Open the terminal window. Create a new folder
   2. git clone https://github.com/abhinavtdgp/frontenddevelopertest.git
@@ -36,8 +36,8 @@ How to run the application?
   6. npm start
   7. open a browser(chrome) and run http://localhost:3000
 
-Functionality provided
-   As a user one can perform the below functionalities in the web application.
+- Functionality provided
+  As a user one can perform the below functionalities in the web application.
    1. Application will show a list of hotels on load of the page sorted aphabetically(default).
    2. There is a controller section using that one can search and filter the list of hotels
    3. Sorting on the basis of Alphabet, Price and Rating in ascending order.
@@ -45,5 +45,5 @@ Functionality provided
    5. Type the name of the hotel you need to search in the filter by name text box.
    7. select the date of depart in the date type input box in order to search hotels on depart date.
 
-Tech Stack used
+- Tech Stack used
    1. React, Redux, thunk, node, express, webpack, html, css
