@@ -6,9 +6,11 @@ const sortingFunction = (type,actualList) => {
     var newList = [];
     if(type=="price"){
         newList = actualList.sort((a,b) => {
-            //console.log("price",a.price.slice(1),b.price.slice(1));
-            if(parseFloat(a.price.slice(1))>parseFloat(b.price.slice(1))){return 1;}
-            else if(parseFloat(a.price.slice(1))<parseFloat(b.price.slice(1))){return -1;}
+            let a1 = parseFloat(a.price.replace(',','').substr(1));
+            let b1 = parseFloat(b.price.replace(',','').substr(1));
+            //console.log("price",a1,b1);
+            if(a1>b1){return 1;}
+            else if(a1<b1){return -1;}
             else{return 0;}
         });
     }else if(type=="alphabetically"){
@@ -29,11 +31,24 @@ const sortingFunction = (type,actualList) => {
 }
 
 const filterFunction = (type,value,actualList) => {
-    var newList = [];
-    if(type == "name"){
+    let newList = actualList;
+
+    if(type == "name" && value){
         newList = actualList.filter((hotel) => {
             //console.log("abhi",hotel.hotelName,value);
            return (hotel.hotelName.toLowerCase().indexOf(value.toLowerCase()) != -1);
+        })
+    }else if(type="departdate" && value){
+        console.log("this comes here ",type,value,actualList);
+        newList = actualList.filter((hotel)=>{
+            //console.log("date",new Date(hotel.departDate),new Date(value));
+            let departDate =new Date(hotel.departDate).getDate();
+            let selectedDate = new Date(value).getDate();
+            let departMonth =new Date(hotel.departDate).getMonth();
+            let selectedMonth = new Date(value).getMonth();
+            let departYear =new Date(hotel.departDate).getFullYear();
+            let selectedYear = new Date(value).getFullYear();
+            return (departDate==selectedDate && departMonth==selectedMonth && departYear == selectedYear);
         })
     }
     return newList;

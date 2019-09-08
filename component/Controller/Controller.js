@@ -36,6 +36,10 @@ class Controller extends Component{
                     <div className="filter-wapper">
                         <input className="filter-input" placeholder="Filter By Name" onChange={this._onChangeHandler.bind(this,"name")}/>
                     </div>
+                    <div className="filter-wapper">
+                        <p>Filter by Date</p>
+                        <input className="filter-input" type="date" placeholder="Filter By Date" onChange={this._onChangeHandler.bind(this,"departdate")}/>
+                    </div>
                 </div>
             </div>
         )

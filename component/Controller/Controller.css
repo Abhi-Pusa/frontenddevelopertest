@@ -16,7 +16,7 @@
     color: #000080;
     border-bottom: 2px solid grey;
 }
-.controller-btn:last-child{
+.controller-btn:nth-of-type(3){
     border-bottom: 0px;
 }
 .icon{
@@ -33,6 +33,10 @@
 }
 .filter-wapper{
     padding-top: 15px;
+}
+.filter-wapper p{
+    margin: 0px;
+    color: #000080;
 }
 .filter-input{
     width: 100%;
