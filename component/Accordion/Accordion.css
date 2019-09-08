@@ -1,0 +1,28 @@
+.accordion-header{
+    padding: 10px 15px;
+    margin: 0px;
+    margin-top: -37px;
+    background-color: white;
+    display: inline-block;
+    color: #000080;
+    position: relative;
+}
+.content-head{
+    padding: 10px 15px;
+    margin: 0px;
+    color: #000080;
+}
+.content-body{
+    font-size: 11px;
+    margin: 0px;
+    padding: 0px 15px 15px 15px;
+}
+.accordion-body{
+    overflow: hidden;
+    transition: max-height 0.5s ease 0s;
+}
+.acc-icon{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
